@@ -1,0 +1,83 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int dia, mes;
+        string signo = "";
+        string horoscopo = "";
+
+        Console.Write("Ingrese el día de nacimiento: ");
+        dia = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el mes de nacimiento (1-12): ");
+        mes = int.Parse(Console.ReadLine());
+
+        if ((mes == 3 && dia >= 21) || (mes == 4 && dia <= 19))
+        {
+            signo = "Aries";
+            horoscopo = "Hoy tendrás mucha energía para cumplir tus metas.";
+        }
+        else if ((mes == 4 && dia >= 20) || (mes == 5 && dia <= 20))
+        {
+            signo = "Tauro";
+            horoscopo = "Recibirás una buena noticia muy pronto.";
+        }
+        else if ((mes == 5 && dia >= 21) || (mes == 6 && dia <= 20))
+        {
+            signo = "Géminis";
+            horoscopo = "Un nuevo reto te ayudará a crecer.";
+        }
+        else if ((mes == 6 && dia >= 21) || (mes == 7 && dia <= 22))
+        {
+            signo = "Cáncer";
+            horoscopo = "Disfrutarás un momento especial con tu familia.";
+        }
+        else if ((mes == 7 && dia >= 23) || (mes == 8 && dia <= 22))
+        {
+            signo = "Leo";
+            horoscopo = "Tu creatividad brillará el día de hoy.";
+        }
+        else if ((mes == 8 && dia >= 23) || (mes == 9 && dia <= 22))
+        {
+            signo = "Virgo";
+            horoscopo = "La organización será tu mejor aliada.";
+        }
+        else if ((mes == 9 && dia >= 23) || (mes == 10 && dia <= 22))
+        {
+            signo = "Libra";
+            horoscopo = "Encontrarás equilibrio en tus decisiones.";
+        }
+        else if ((mes == 10 && dia >= 23) || (mes == 11 && dia <= 21))
+        {
+            signo = "Escorpio";
+            horoscopo = "Tu esfuerzo comenzará a dar resultados.";
+        }
+        else if ((mes == 11 && dia >= 22) || (mes == 12 && dia <= 21))
+        {
+            signo = "Sagitario";
+            horoscopo = "Es un buen momento para aprender algo nuevo.";
+        }
+        else if ((mes == 12 && dia >= 22) || (mes == 1 && dia <= 19))
+        {
+            signo = "Capricornio";
+            horoscopo = "La disciplina te llevará al éxito.";
+        }
+        else if ((mes == 1 && dia >= 20) || (mes == 2 && dia <= 18))
+        {
+            signo = "Acuario";
+            horoscopo = "Una gran idea llegará a tu mente.";
+        }
+        else
+        {
+            signo = "Piscis";
+            horoscopo = "Hoy será un excelente día para relajarte.";
+        }
+
+        Console.WriteLine("\nTu signo zodiacal es: " + signo);
+        Console.WriteLine("Horóscopo: " + horoscopo);
+
+        Console.ReadKey();
+    }
+}
