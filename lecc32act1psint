@@ -1,0 +1,38 @@
+Algoritmo ConversionMetros
+
+    Definir metros, resultado Como Real
+    Definir opcion Como Entero
+
+    Escribir "Ingrese la cantidad en metros: "
+    Leer metros
+
+    Escribir "===== MENU ====="
+    Escribir "1. Milimetros"
+    Escribir "2. Centimetros"
+    Escribir "3. Decimetros"
+    Escribir "4. Hectometros"
+    Escribir "5. Kilometros"
+    Escribir "Seleccione una opcion: "
+    Leer opcion
+
+    Segun opcion Hacer
+        1:
+            resultado <- metros * 1000
+            Escribir metros, " metros equivalen a ", resultado, " milimetros."
+        2:
+            resultado <- metros * 100
+            Escribir metros, " metros equivalen a ", resultado, " centimetros."
+        3:
+            resultado <- metros * 10
+            Escribir metros, " metros equivalen a ", resultado, " decimetros."
+        4:
+            resultado <- metros / 100
+            Escribir metros, " metros equivalen a ", resultado, " hectometros."
+        5:
+            resultado <- metros / 1000
+            Escribir metros, " metros equivalen a ", resultado, " kilometros."
+        De Otro Modo:
+            Escribir "Opcion no valida."
+    FinSegun
+
+FinAlgoritmo
