@@ -1,0 +1,47 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random random = new Random();
+        char respuesta = 'S';
+
+        while (respuesta == 'S' || respuesta == 's')
+        {
+            Console.WriteLine("PIEDRA, PAPEL O TIJERA");
+            Console.WriteLine("1. Piedra");
+            Console.WriteLine("2. Papel");
+            Console.WriteLine("3. Tijera");
+            Console.Write("Seleccione una opción: ");
+
+            int usuario = Convert.ToInt32(Console.ReadLine());
+            int computadora = random.Next(1, 4);
+
+            Console.WriteLine("\nLa computadora eligió: " + computadora);
+
+            if (usuario == computadora)
+            {
+                Console.WriteLine("¡Empate!");
+            }
+            else if ((usuario == 1 && computadora == 3) ||
+                     (usuario == 2 && computadora == 1) ||
+                     (usuario == 3 && computadora == 2))
+            {
+                Console.WriteLine("¡Ganaste!");
+            }
+            else
+            {
+                Console.WriteLine("¡La computadora ganó!");
+            }
+
+            Console.Write("\n¿Desea jugar de nuevo? (S/N): ");
+            respuesta = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine();
+        }
+
+        Console.WriteLine("Gracias por jugar.");
+        Console.ReadKey();
+    }
+}
