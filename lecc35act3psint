@@ -1,0 +1,37 @@
+Algoritmo PiedraPapelTijera
+
+    Definir usuario, computadora Como Entero
+    Definir respuesta Como Caracter
+
+    respuesta <- "S"
+
+    Mientras respuesta = "S" O respuesta = "s" Hacer
+
+        Escribir "PIEDRA, PAPEL O TIJERA"
+        Escribir "1. Piedra"
+        Escribir "2. Papel"
+        Escribir "3. Tijera"
+        Leer usuario
+
+        computadora <- Aleatorio(1,3)
+
+        Escribir "La computadora eligió: ", computadora
+
+        Si usuario = computadora Entonces
+            Escribir "¡Empate!"
+        Sino
+            Si (usuario = 1 Y computadora = 3) O
+               (usuario = 2 Y computadora = 1) O
+               (usuario = 3 Y computadora = 2) Entonces
+                Escribir "¡Ganaste!"
+            Sino
+                Escribir "¡La computadora ganó!"
+            FinSi
+        FinSi
+
+        Escribir "¿Desea jugar de nuevo? (S/N)"
+        Leer respuesta
+
+    FinMientras
+
+FinAlgoritmo
