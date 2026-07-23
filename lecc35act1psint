@@ -1,0 +1,33 @@
+Algoritmo ConversorMonedas
+
+    Definir cantidad, dolares, euros, yenes, pesosMexicanos, pesosColombianos Como Real
+    Definir respuesta Como Caracter
+
+    respuesta <- "S"
+
+    Mientras respuesta = "S" O respuesta = "s" Hacer
+
+        Escribir "Ingrese la cantidad en quetzales:"
+        Leer cantidad
+
+        // Tasas de cambio aproximadas
+        dolares <- cantidad / 7.70
+        euros <- cantidad / 8.90
+        yenes <- cantidad * 18.50
+        pesosMexicanos <- cantidad * 2.45
+        pesosColombianos <- cantidad * 530
+
+        Escribir "Equivalencias:"
+        Escribir "Dólares (EE.UU.): ", dolares
+        Escribir "Euros (Europa): ", euros
+        Escribir "Yenes (Japón): ", yenes
+        Escribir "Pesos Mexicanos (México): ", pesosMexicanos
+        Escribir "Pesos Colombianos (Colombia): ", pesosColombianos
+
+        Escribir ""
+        Escribir "¿Desea convertir otra cantidad? (S/N)"
+        Leer respuesta
+
+    FinMientras
+
+FinAlgoritmo
