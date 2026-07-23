@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int precio, pago, cambio;
+        int billetes200, billetes50, monedas20, residuo;
+
+        Console.Write("Ingrese el precio del producto: ");
+        precio = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Ingrese la cantidad con la que paga el cliente: ");
+        pago = Convert.ToInt32(Console.ReadLine());
+
+        cambio = pago - precio;
+
+        billetes200 = cambio / 200;
+        residuo = cambio % 200;
+
+        billetes50 = residuo / 50;
+        residuo = residuo % 50;
+
+        monedas20 = residuo / 20;
+
+        Console.WriteLine("\nCambio total: Q" + cambio);
+        Console.WriteLine("Billetes de Q200: " + billetes200);
+        Console.WriteLine("Billetes de Q50: " + billetes50);
+        Console.WriteLine("Monedas de Q20: " + monedas20);
+
+        Console.ReadKey();
+    }
+}
