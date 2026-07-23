@@ -1,0 +1,38 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double cantidad;
+        char respuesta = 'S';
+
+        while (respuesta == 'S' || respuesta == 's')
+        {
+            Console.Write("Ingrese la cantidad en quetzales: ");
+            cantidad = Convert.ToDouble(Console.ReadLine());
+
+            // Tasas de cambio aproximadas
+            double dolares = cantidad / 7.70;
+            double euros = cantidad / 8.90;
+            double yenes = cantidad * 18.50;
+            double pesosMexicanos = cantidad * 2.45;
+            double pesosColombianos = cantidad * 530;
+
+            Console.WriteLine("\nEquivalencias:");
+            Console.WriteLine("Dólares (EE.UU.): " + dolares);
+            Console.WriteLine("Euros (Europa): " + euros);
+            Console.WriteLine("Yenes (Japón): " + yenes);
+            Console.WriteLine("Pesos Mexicanos (México): " + pesosMexicanos);
+            Console.WriteLine("Pesos Colombianos (Colombia): " + pesosColombianos);
+
+            Console.Write("\n¿Desea convertir otra cantidad? (S/N): ");
+            respuesta = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine();
+        }
+
+        Console.WriteLine("Gracias por utilizar el conversor de monedas.");
+        Console.ReadKey();
+    }
+}
