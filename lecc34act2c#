@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double peso, altura, imc;
+
+        Console.Write("Ingrese su peso en kilogramos: ");
+        peso = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Ingrese su altura en metros: ");
+        altura = Convert.ToDouble(Console.ReadLine());
+
+        imc = peso / (altura * altura);
+
+        Console.WriteLine("Su índice de masa corporal es: " + imc);
+
+        Console.ReadKey();
+    }
+}
